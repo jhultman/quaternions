@@ -23,11 +23,12 @@ def plot_quaternions(corners, qorners):
         ax.scatter(*c[1:3], c='b')
         ax.scatter(*q[1:3], c='g')
 
-    ax.set_xlim([-5, 5])
-    ax.set_ylim([-5, 5])
+    ax.set_xlim([-2, 2])
+    ax.set_ylim([-2, 2])
     ax.set_axis_off()
     ax.set_aspect('equal')
 
+    plt.tight_layout()
     plt.savefig('images/quaternions.png')
 
 
