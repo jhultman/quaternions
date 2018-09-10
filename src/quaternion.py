@@ -38,8 +38,8 @@ class Quaternion:
 
 
     def __div__(*args):
-        msg = '''Division ambiguous. Use 
-        multiplication by inverse.'''
+        msg = '''Division ambiguous. 
+        Use multiplication by inverse.'''
         raise NotImplementedError(msg)
     
 
@@ -111,7 +111,7 @@ class Quaternion:
 
 
     def rotation(theta, axis):
-        axis /= np.linalg.norm(axis)
+        axis = axis / np.linalg.norm(axis)
         w = np.cos(theta / 2)
         xyz = np.sin(theta / 2) * axis
         return Quaternion(w, *xyz)
